@@ -1,0 +1,5 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    S1["Server 1<br/>100G"] --> L["Leaf A"]
+    S2["Server 2<br/>100G"] --> L
+    L -->|"200G → 100G<br/>큐 적체·혼잡"| ST["Storage<br/>100G 링크"]

@@ -1,0 +1,7 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart LR
+    SRV["GPU 서버"]
+    SRV -->|"저지연·무손실"| STO["Storage Fabric"]
+    SRV -->|"백엔드, 동서 트래픽<br/>Rail-Optimized"| TRN["Training Fabric"]
+    SRV -->|"프런트엔드<br/>축소 Clos"| INF["Inference Fabric"]
+    SRV -->|"1G OOB"| MGT["Management"]

@@ -1,0 +1,8 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    S1G0["S1.GPU0"] --> RL0["Rail 0 Leaf"]
+    S2G0["S2.GPU0"] --> RL0
+    S1G1["S1.GPU1"] --> RL1["Rail 1 Leaf"]
+    S2G1["S2.GPU1"] --> RL1
+    RL0 --> SP["Spine"]
+    RL1 --> SP

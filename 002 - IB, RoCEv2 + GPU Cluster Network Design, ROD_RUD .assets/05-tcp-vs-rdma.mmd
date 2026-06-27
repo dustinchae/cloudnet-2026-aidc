@@ -1,0 +1,4 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart LR
+    AT["App"] --> KT["Kernel TCP/IP"] --> NT["NIC"] -->|wire| NT2["NIC"] --> KT2["Kernel"] --> AT2["App"]
+    AR["App"] --> HR["HCA"] -->|wire| HR2["HCA"] --> AR2["App"]

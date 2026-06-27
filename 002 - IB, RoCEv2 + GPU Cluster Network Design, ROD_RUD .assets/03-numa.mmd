@@ -1,0 +1,9 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart LR
+    subgraph S0["Socket 0 (NUMA 0)"]
+        C0["CPU 0"] ---|"빠름"| M0["Local Mem 0"]
+    end
+    subgraph S1["Socket 1 (NUMA 1)"]
+        C1["CPU 1"] ---|"빠름"| M1["Local Mem 1"]
+    end
+    C0 <-.->|"UPI/xGMI<br/>느림 (remote)"| C1

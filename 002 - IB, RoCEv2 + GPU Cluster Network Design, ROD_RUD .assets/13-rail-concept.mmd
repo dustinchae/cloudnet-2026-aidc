@@ -1,0 +1,8 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    G0["GPU0"] --- N0["NIC0"]
+    G1["GPU1"] --- N1["NIC1"]
+    G7["GPU7"] --- N7["NIC7"]
+    N0 -.-> R0["Rail 0 = 모든 서버 GPU0/NIC0"]
+    N1 -.-> R1["Rail 1 = 모든 서버 GPU1/NIC1"]
+    N7 -.-> R7["Rail 7 = 모든 서버 GPU7/NIC7"]

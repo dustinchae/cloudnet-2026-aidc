@@ -1,0 +1,10 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+sequenceDiagram
+    participant TX as 송신 NIC
+    participant SW as 스위치 큐
+    participant RX as 수신 NIC
+    TX->>SW: 트래픽 (ECT)
+    Note over SW: 큐↑, Threshold 초과
+    SW->>RX: CE=1 마킹 (drop 대신)
+    RX->>TX: CNP
+    Note over TX: DCQCN rate↓ = rate(1−α/2)

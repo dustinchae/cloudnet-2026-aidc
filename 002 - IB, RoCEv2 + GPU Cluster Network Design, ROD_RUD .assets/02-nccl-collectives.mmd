@@ -1,0 +1,12 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart LR
+    B["Broadcast<br/>root→all"]
+    R["Reduce<br/>all→root"]
+    S["Scatter<br/>root→all 분배"]
+    G["Gather<br/>all→root 수집"]
+    G --> AG["AllGather"]
+    B --> AG
+    R --> AR["AllReduce"]
+    B --> AR
+    R --> RS["ReduceScatter"]
+    S --> RS

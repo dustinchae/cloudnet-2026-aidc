@@ -1,0 +1,8 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    Q["큐 사용량↑"] --> E{ECN Threshold?}
+    E -->|초과| MARK["CE 마킹→CNP→rate↓"]
+    MARK --> R{완화?}
+    R -->|예| OK["다른 flow 영향 최소"]
+    R -->|아니오| P{PFC XOFF?}
+    P -->|초과| PAUSE["Class 정지<br/>Drop 방지(최후)"]

@@ -1,0 +1,6 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    SRC["송신 서버"] -->|"③ 전파"| LA["Leaf A"]
+    LA -->|"② 전파"| SP["Spine A (혼잡)"]
+    SP -->|"① XOFF 초과<br/>Pause Frame"| DST["Egress Queue"]
+    SP -.->|"HoL: 정상 flow도 멈춤"| VIC["victim flow"]

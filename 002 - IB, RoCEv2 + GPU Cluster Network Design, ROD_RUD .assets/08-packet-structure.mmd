@@ -1,0 +1,9 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart LR
+    subgraph IBP["InfiniBand"]
+        i1["LRH"] --> i2["GRH(선택)"] --> i3["BTH"] --> i4["RETH"] --> i5["Payload"] --> i6["ICRC+VCRC"]
+    end
+    subgraph R2P["RoCEv2"]
+        r1["Ethernet"] --> r2["IP+UDP :4791"] --> r3["BTH"] --> r4["RETH"] --> r5["Payload"] --> r6["ICRC"]
+    end
+    IBP -.->|"L2/L3만 교체, BTH(transport)는 동일"| R2P

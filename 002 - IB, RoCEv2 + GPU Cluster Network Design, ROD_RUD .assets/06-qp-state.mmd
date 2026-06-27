@@ -1,0 +1,8 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+stateDiagram-v2
+    [*] --> RESET
+    RESET --> INIT: init
+    INIT --> RTR: peer info (QPN+LID/GID)
+    RTR --> RTS: more attrs
+    note right of RTR: RTR=수신만 가능
+    note right of RTS: RTS=송신 가능

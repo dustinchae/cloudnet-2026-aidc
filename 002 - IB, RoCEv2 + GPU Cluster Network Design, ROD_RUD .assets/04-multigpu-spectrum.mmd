@@ -1,0 +1,8 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart LR
+    A["4× PCIe<br/>직접 링크 없음"]
+    B["2× NVLink Pair<br/>pair간 PCIe+UPI"]
+    C["4-way NVLink<br/>(H200 NVL)"]
+    D["8GPU=4-GPU<br/>도메인 2개"]
+    E["HGX+NVSwitch<br/>non-blocking"]
+    A -->|"균일성 증가 →"| B --> C --> D --> E

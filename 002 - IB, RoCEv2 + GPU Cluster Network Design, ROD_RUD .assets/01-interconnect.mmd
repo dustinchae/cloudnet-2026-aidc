@@ -1,0 +1,18 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    subgraph PKG["하나의 패키지 (Blackwell)"]
+        D0["GPU Die 0"]
+        D1["GPU Die 1"]
+        D0 <-->|"NV-HBI ~10 TB/s<br/>OS엔 단일 GPU"| D1
+    end
+    CPU["Grace CPU"]
+    PKG <-->|"NVLink-C2C 900 GB/s<br/>cache-coherent"| CPU
+    subgraph NODE["노드 내부 (8 GPU)"]
+        G0["GPU"]
+        G1["GPU"]
+        SW["NVSwitch (교차로)"]
+        G0 <-->|"NVLink (길)"| SW
+        G1 <-->|"NVLink"| SW
+    end
+    IO["NIC / SSD"]
+    CPU <-->|"PCIe (표준 도로)"| IO

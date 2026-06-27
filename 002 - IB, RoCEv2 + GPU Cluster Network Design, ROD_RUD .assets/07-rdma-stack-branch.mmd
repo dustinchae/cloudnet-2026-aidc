@@ -1,0 +1,9 @@
+%%{init: {'themeVariables': {'fontSize':'11px'}}}%%
+flowchart TB
+    APP["App + libibverbs"]:::s --> TR["RDMA Transport (RC/UC/UD)"]:::s
+    TR --> NET{Network Layer<br/>분기}
+    NET --> IB["IB: LID 라우팅"]
+    NET --> R2["RoCEv2: UDP/IP :4791 (표준)"]
+    NET --> R1["RoCEv1: Eth L2 (미사용)"]
+    NET --> IW["iWARP: TCP"]
+    classDef s fill:#1f6feb,color:#fff
