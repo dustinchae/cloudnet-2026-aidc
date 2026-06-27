@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 118" width="620" height="118" style="max-width:100%;height:auto">
+  <rect width="620" height="118" rx="8" fill="#1A2535"/>
+  <text x="310" y="16" text-anchor="middle" font-size="10" fill="#7A96B0" font-family="'Courier New',Courier,monospace" letter-spacing="1.5">GPUDirect RDMA — 직접 경로 (CPU 미개입)</text>
+
+  <!-- Box 1: GPU 메모리 (송신측) -->
+  <rect x="45" y="27" width="90" height="40" rx="4" fill="rgba(100,155,230,0.15)" stroke="rgba(100,155,230,0.5)" stroke-width="1"/>
+  <text x="90" y="45" text-anchor="middle" font-size="11" fill="#82B8F0" font-family="system-ui,-apple-system,sans-serif" font-weight="600">GPU 메모리</text>
+  <text x="90" y="59" text-anchor="middle" font-size="10" fill="rgba(130,184,240,0.6)" font-family="'Courier New',Courier,monospace">송신측</text>
+
+  <!-- Arrow 1 -->
+  <line x1="136" y1="47" x2="143" y2="47" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="143,43 155,47 143,51" fill="#00C9A7"/>
+
+  <!-- Box 2: RDMA NIC (HCA) -->
+  <rect x="155" y="27" width="90" height="40" rx="4" fill="rgba(0,201,167,0.12)" stroke="rgba(0,201,167,0.45)" stroke-width="1"/>
+  <text x="200" y="45" text-anchor="middle" font-size="11" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="600">RDMA NIC</text>
+  <text x="200" y="59" text-anchor="middle" font-size="10" fill="rgba(0,201,167,0.55)" font-family="'Courier New',Courier,monospace">PCIe 직접</text>
+
+  <!-- Arrow 2 -->
+  <line x1="246" y1="47" x2="253" y2="47" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="253,43 265,47 253,51" fill="#4A607A"/>
+
+  <!-- Box 3: 고속 네트워크 (center, dashed) -->
+  <rect x="265" y="27" width="90" height="40" rx="4" fill="rgba(122,150,176,0.07)" stroke="#2A3F55" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="310" y="45" text-anchor="middle" font-size="11" fill="#7A96B0" font-family="system-ui,-apple-system,sans-serif" font-style="italic">고속 네트워크</text>
+  <text x="310" y="59" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">IB / RoCEv2</text>
+
+  <!-- Arrow 3 -->
+  <line x1="356" y1="47" x2="363" y2="47" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="363,43 375,47 363,51" fill="#00C9A7"/>
+
+  <!-- Box 4: RDMA NIC -->
+  <rect x="375" y="27" width="90" height="40" rx="4" fill="rgba(0,201,167,0.12)" stroke="rgba(0,201,167,0.45)" stroke-width="1"/>
+  <text x="420" y="45" text-anchor="middle" font-size="11" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="600">RDMA NIC</text>
+  <text x="420" y="59" text-anchor="middle" font-size="10" fill="rgba(0,201,167,0.55)" font-family="'Courier New',Courier,monospace">직접 쓰기</text>
+
+  <!-- Arrow 4 -->
+  <line x1="466" y1="47" x2="473" y2="47" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="473,43 485,47 473,51" fill="rgba(100,155,230,0.7)"/>
+
+  <!-- Box 5: GPU 메모리 (수신측) -->
+  <rect x="485" y="27" width="90" height="40" rx="4" fill="rgba(100,155,230,0.15)" stroke="rgba(100,155,230,0.5)" stroke-width="1"/>
+  <text x="530" y="45" text-anchor="middle" font-size="11" fill="#82B8F0" font-family="system-ui,-apple-system,sans-serif" font-weight="600">GPU 메모리</text>
+  <text x="530" y="59" text-anchor="middle" font-size="10" fill="rgba(130,184,240,0.6)" font-family="'Courier New',Courier,monospace">수신측</text>
+
+  <!-- Bottom note: no CPU, no system RAM -->
+  <text x="310" y="95" text-anchor="middle" font-size="10" fill="#2A3F55" font-family="'Courier New',Courier,monospace">— CPU 개입 없음 · 시스템 RAM 미경유 · 제로-카피 —</text>
+
+  <!-- Highlight: teal glow on RDMA NIC boxes -->
+  <rect x="155" y="27" width="90" height="40" rx="4" fill="none" stroke="rgba(0,201,167,0.2)" stroke-width="3"/>
+  <rect x="375" y="27" width="90" height="40" rx="4" fill="none" stroke="rgba(0,201,167,0.2)" stroke-width="3"/>
+</svg>

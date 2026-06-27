@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 128" width="800" height="128" style="max-width:100%;height:auto">
+  <rect width="800" height="128" rx="8" fill="#1A2535"/>
+  <text x="400" y="16" text-anchor="middle" font-size="10" fill="#7A96B0" font-family="'Courier New',Courier,monospace" letter-spacing="1.5">TRADITIONAL TCP/IP — GPU 간 데이터 경로 (6단계)</text>
+
+  <!-- Box 1: GPU 메모리 (송신측) -->
+  <rect x="10" y="28" width="90" height="40" rx="4" fill="rgba(100,155,230,0.15)" stroke="rgba(100,155,230,0.5)" stroke-width="1"/>
+  <text x="55" y="51" text-anchor="middle" font-size="11" fill="#82B8F0" font-family="system-ui,-apple-system,sans-serif" font-weight="600">GPU 메모리</text>
+
+  <!-- Arrow 1 -->
+  <line x1="101" y1="48" x2="108" y2="48" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="108,44 117,48 108,52" fill="#4A607A"/>
+
+  <!-- Box 2: 시스템 RAM -->
+  <rect x="117" y="28" width="90" height="40" rx="4" fill="rgba(155,120,210,0.12)" stroke="rgba(155,120,210,0.4)" stroke-width="1"/>
+  <text x="162" y="51" text-anchor="middle" font-size="11" fill="#B89EE8" font-family="system-ui,-apple-system,sans-serif" font-weight="600">시스템 RAM</text>
+
+  <!-- Arrow 2 -->
+  <line x1="208" y1="48" x2="215" y2="48" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="215,44 224,48 215,52" fill="#4A607A"/>
+
+  <!-- Box 3: OS / CPU -->
+  <rect x="224" y="28" width="90" height="40" rx="4" fill="rgba(210,100,100,0.12)" stroke="rgba(210,100,100,0.4)" stroke-width="1"/>
+  <text x="269" y="51" text-anchor="middle" font-size="11" fill="#E08888" font-family="system-ui,-apple-system,sans-serif" font-weight="600">OS / CPU</text>
+
+  <!-- Arrow 3 -->
+  <line x1="315" y1="48" x2="322" y2="48" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="322,44 331,48 322,52" fill="#4A607A"/>
+
+  <!-- Box 4: NIC → 네트워크 (wider, center) -->
+  <rect x="331" y="28" width="138" height="40" rx="4" fill="rgba(122,150,176,0.07)" stroke="#2A3F55" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="400" y="51" text-anchor="middle" font-size="11" fill="#7A96B0" font-family="system-ui,-apple-system,sans-serif" font-style="italic">NIC → 네트워크</text>
+
+  <!-- Arrow 4 -->
+  <line x1="470" y1="48" x2="477" y2="48" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="477,44 486,48 477,52" fill="#4A607A"/>
+
+  <!-- Box 5: OS / CPU -->
+  <rect x="486" y="28" width="90" height="40" rx="4" fill="rgba(210,100,100,0.12)" stroke="rgba(210,100,100,0.4)" stroke-width="1"/>
+  <text x="531" y="51" text-anchor="middle" font-size="11" fill="#E08888" font-family="system-ui,-apple-system,sans-serif" font-weight="600">OS / CPU</text>
+
+  <!-- Arrow 5 -->
+  <line x1="577" y1="48" x2="584" y2="48" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="584,44 593,48 584,52" fill="#4A607A"/>
+
+  <!-- Box 6: 시스템 RAM -->
+  <rect x="593" y="28" width="90" height="40" rx="4" fill="rgba(155,120,210,0.12)" stroke="rgba(155,120,210,0.4)" stroke-width="1"/>
+  <text x="638" y="51" text-anchor="middle" font-size="11" fill="#B89EE8" font-family="system-ui,-apple-system,sans-serif" font-weight="600">시스템 RAM</text>
+
+  <!-- Arrow 6 -->
+  <line x1="684" y1="48" x2="691" y2="48" stroke="#4A607A" stroke-width="1.5"/>
+  <polygon points="691,44 700,48 691,52" fill="#4A607A"/>
+
+  <!-- Box 7: GPU 메모리 (수신측) -->
+  <rect x="700" y="28" width="90" height="40" rx="4" fill="rgba(100,155,230,0.15)" stroke="rgba(100,155,230,0.5)" stroke-width="1"/>
+  <text x="745" y="51" text-anchor="middle" font-size="11" fill="#82B8F0" font-family="system-ui,-apple-system,sans-serif" font-weight="600">GPU 메모리</text>
+
+  <!-- Step labels -->
+  <text x="55"  y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">송신측</text>
+  <text x="162" y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">DMA 복사</text>
+  <text x="269" y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">커널 처리</text>
+  <text x="400" y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">패킷 전송</text>
+  <text x="531" y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">수신 처리</text>
+  <text x="638" y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">버퍼 복사</text>
+  <text x="745" y="82" text-anchor="middle" font-size="10" fill="#4A607A" font-family="'Courier New',Courier,monospace">수신측</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="114" text-anchor="middle" font-size="10" fill="#2A3F55" font-family="'Courier New',Courier,monospace">— 6번의 메모리 복사 · 2번의 OS 개입 발생 —</text>
+</svg>

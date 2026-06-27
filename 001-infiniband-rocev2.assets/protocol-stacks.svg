@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" width="560" height="290" style="max-width:100%;height:auto">
+  <rect width="560" height="290" rx="8" fill="#1A2535"/>
+  <text x="280" y="20" text-anchor="middle" font-size="10" fill="#7A96B0" font-family="'Courier New',Courier,monospace" letter-spacing="1.5">프로토콜 스택 비교</text>
+
+  <!-- ── InfiniBand Column (left) ── -->
+  <clipPath id="lb">
+    <rect x="20" y="30" width="240" height="245" rx="6"/>
+  </clipPath>
+
+  <!-- Column border -->
+  <rect x="20" y="30" width="240" height="245" rx="6" fill="none" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="20" y="30" width="240" height="36" rx="0" fill="rgba(0,201,167,0.14)" clip-path="url(#lb)"/>
+  <rect x="20" y="30" width="240" height="10" fill="rgba(0,201,167,0.14)"/>
+  <text x="140" y="53" text-anchor="middle" font-size="13" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="700" letter-spacing="0.03em">InfiniBand</text>
+  <line x1="20" y1="66" x2="260" y2="66" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 1: Application (dim) -->
+  <rect x="20" y="66" width="240" height="37" fill="rgba(122,150,176,0.05)"/>
+  <text x="140" y="86" text-anchor="middle" font-size="12" fill="#7A96B0" font-family="system-ui,-apple-system,sans-serif" font-style="italic">애플리케이션 (AI 프레임워크)</text>
+  <line x1="20" y1="103" x2="260" y2="103" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 2: IB Verbs -->
+  <rect x="20" y="103" width="240" height="37" fill="rgba(0,201,167,0.07)"/>
+  <text x="140" y="123" text-anchor="middle" font-size="12" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="600">IB Verbs (RDMA API)</text>
+  <line x1="20" y1="140" x2="260" y2="140" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 3: IB Transport -->
+  <rect x="20" y="140" width="240" height="37" fill="rgba(0,201,167,0.07)"/>
+  <text x="140" y="160" text-anchor="middle" font-size="12" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="600">IB Transport Layer</text>
+  <line x1="20" y1="177" x2="260" y2="177" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 4: IB Network -->
+  <rect x="20" y="177" width="240" height="37" fill="rgba(0,201,167,0.07)"/>
+  <text x="140" y="197" text-anchor="middle" font-size="12" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="600">IB Network Layer</text>
+  <line x1="20" y1="214" x2="260" y2="214" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 5: IB Physical (HCA) -->
+  <rect x="20" y="214" width="240" height="61" fill="rgba(0,201,167,0.09)" clip-path="url(#lb)"/>
+  <text x="140" y="237" text-anchor="middle" font-size="12" fill="#00C9A7" font-family="system-ui,-apple-system,sans-serif" font-weight="600">IB Link / Physical</text>
+  <text x="140" y="254" text-anchor="middle" font-size="10" fill="rgba(0,201,167,0.6)" font-family="'Courier New',Courier,monospace">(HCA — 전용 하드웨어)</text>
+
+  <!-- ── RoCEv2 Column (right) ── -->
+  <clipPath id="rb">
+    <rect x="300" y="30" width="240" height="245" rx="6"/>
+  </clipPath>
+
+  <!-- Column border -->
+  <rect x="300" y="30" width="240" height="245" rx="6" fill="none" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="300" y="30" width="240" height="36" rx="0" fill="rgba(245,166,35,0.12)" clip-path="url(#rb)"/>
+  <rect x="300" y="30" width="240" height="10" fill="rgba(245,166,35,0.12)"/>
+  <text x="420" y="53" text-anchor="middle" font-size="13" fill="#F5A623" font-family="system-ui,-apple-system,sans-serif" font-weight="700" letter-spacing="0.03em">RoCEv2</text>
+  <line x1="300" y1="66" x2="540" y2="66" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 1: Application (shared - dim) -->
+  <rect x="300" y="66" width="240" height="37" fill="rgba(122,150,176,0.05)"/>
+  <text x="420" y="86" text-anchor="middle" font-size="12" fill="#7A96B0" font-family="system-ui,-apple-system,sans-serif" font-style="italic">애플리케이션 (AI 프레임워크)</text>
+  <line x1="300" y1="103" x2="540" y2="103" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 2: IB Verbs (same API as IB!) -->
+  <rect x="300" y="103" width="240" height="37" fill="rgba(245,166,35,0.07)"/>
+  <text x="420" y="120" text-anchor="middle" font-size="12" fill="#F5A623" font-family="system-ui,-apple-system,sans-serif" font-weight="600">IB Verbs (RDMA API)</text>
+  <text x="420" y="133" text-anchor="middle" font-size="10" fill="rgba(245,166,35,0.55)" font-family="'Courier New',Courier,monospace">← IB와 동일한 API</text>
+  <line x1="300" y1="140" x2="540" y2="140" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 3: IB Transport -->
+  <rect x="300" y="140" width="240" height="37" fill="rgba(245,166,35,0.07)"/>
+  <text x="420" y="160" text-anchor="middle" font-size="12" fill="#F5A623" font-family="system-ui,-apple-system,sans-serif" font-weight="600">IB Transport Layer</text>
+  <line x1="300" y1="177" x2="540" y2="177" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 4: UDP / IP (key difference) -->
+  <rect x="300" y="177" width="240" height="37" fill="rgba(245,166,35,0.12)"/>
+  <text x="420" y="197" text-anchor="middle" font-size="12" fill="#F5A623" font-family="system-ui,-apple-system,sans-serif" font-weight="700">UDP / IP (Layer 3)</text>
+  <line x1="300" y1="214" x2="540" y2="214" stroke="#2A3F55" stroke-width="1"/>
+
+  <!-- Layer 5: Ethernet + PFC/ECN -->
+  <rect x="300" y="214" width="240" height="61" fill="rgba(122,150,176,0.08)" clip-path="url(#rb)"/>
+  <text x="420" y="237" text-anchor="middle" font-size="12" fill="#B0C4D4" font-family="system-ui,-apple-system,sans-serif" font-weight="600">Ethernet (기존 스위치)</text>
+  <text x="420" y="254" text-anchor="middle" font-size="10" fill="#7A96B0" font-family="'Courier New',Courier,monospace">PFC + ECN + DCQCN</text>
+
+  <!-- Arrow between columns indicating the difference -->
+  <text x="280" y="200" text-anchor="middle" font-size="18" fill="#2A3F55" font-family="sans-serif">≠</text>
+</svg>
