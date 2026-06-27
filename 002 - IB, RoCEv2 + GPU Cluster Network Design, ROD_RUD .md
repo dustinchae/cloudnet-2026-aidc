@@ -1,9 +1,3 @@
----
-tags: [networking, GPU, AI, InfiniBand, RoCEv2, RDMA, NVLink, NCCL, NUMA, 혼잡제어, DCQCN, Rail-Optimized, AIDC]
-date: 2026-06-27
-source: AIDC 2주차 — IB, RoCEv2 + GPU Cluster Network Design, ROD/RUD (Notion)
----
-
 # IB, RoCEv2 + GPU Cluster Network Design, ROD/RUD — 요점정리
 
 ---
